@@ -5,9 +5,11 @@ import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
+//import { HomePage } from '../pages/home/home';
+import { HomePageModule } from '../pages/home/home.module';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Pagina2PageModule } from '../pages/pagina2/pagina2.module';
+import { PaginaActionSheetPage } from '../pages/pagina-action-sheet/pagina-action-sheet';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,21 +21,25 @@ import { TabProvider } from '../providers/tab/tab';
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
-    TabsPage
+    //HomePage,
+    TabsPage,
+    PaginaActionSheetPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    Pagina2PageModule
+    //PaginaActionSheetPageModule,
+    Pagina2PageModule,
+    HomePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
-    TabsPage
+    //HomePage,
+    TabsPage,
+    PaginaActionSheetPage
   ],
   providers: [
     StatusBar,
