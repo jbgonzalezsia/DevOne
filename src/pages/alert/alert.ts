@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the AlertPage page.
@@ -15,11 +15,48 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AlertPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AlertPage');
+  }
+  abrirAlert(){
+	  	 let alert = this.alertCtrl.create({
+	    title: 'Login',
+	    inputs: [
+	      {
+	        name: 'username',
+	        placeholder: 'Username'
+	      },
+	      {
+	        name: 'password',
+	        placeholder: 'Password',
+	        type: 'password'
+	      }
+	    ],
+	    buttons: [
+	      {
+	        text: 'Cancel',
+	        role: 'cancel',
+	        handler: data => {
+	          console.log('Cancel clicked');
+	        }
+	      },
+	      {
+	        text: 'Login',
+	        handler: data => {
+	          
+	          this.navCtrl.pop();
+	        }
+	      }
+	    ]
+	  });
+	  alert.present();	
+
+
+
+
   }
 
 }

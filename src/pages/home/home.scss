@@ -10,8 +10,21 @@ page-home {
 			background-color: black;
 		}
 	}
+
+	#tpbuttons {
+		display: flex;
+		flex-direction: row;
+		}
+	#tpbuttons button {
+		flex:10;
+	}
+	#subtitulo{
+		text-align:center;
+		background-color:indigo;
+		border-radius:5rem;
+		padding:1rem;
+		color: white;
+	}
 }
-.button-md{
-	background-color:gray;
-}
+//.button-md{background-color:gray;}
 

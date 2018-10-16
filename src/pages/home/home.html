@@ -5,12 +5,22 @@
 </ion-header>
 <ion-content padding>
   <button ion-button color="compuesto" (click)="goPagina2()">Ir a la Pagina 2</button>
-  
+  <br>
   <button ion-button color="compuesto" (click)="goActionSheet()">Ir a ActionSheet</button>
+  <br>
+  <button ion-button color="compuesto" (click)="goAlert()">Ir a Alert</button>
+  <br>
+  <button ion-button color="compuesto" (click)="goLogin()">Ir a Login</button>
+
   <div class="contenedor">
     <div class="div-1">
       <span >Span numero 1</span>
       <button class="boton-1">Boton 1</button>  
     </div>
+  </div>
+  <h3 id="subtitulo">Social Networks</h3><br>
+  <div id="tpbuttons">
+    <button ion-button  (click)="Login()" item-left>Login</button>
+    <button ion-button (click)="Registro()" item-left>Registro</button>
   </div>
 </ion-content>
